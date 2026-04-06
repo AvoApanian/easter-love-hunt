@@ -1,0 +1,73 @@
+.footer {
+  background: linear-gradient(160deg, #3d1a1a 0%, #5c1a2e 50%, #3d1a1a 100%);
+  color: white;
+  padding: 60px 0 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(249, 168, 212, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 30%, rgba(196, 181, 253, 0.06) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.inner {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.brand { margin-bottom: 24px; }
+
+.logo {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 8px;
+  animation: heartbeat 3s ease-in-out infinite;
+}
+
+.tagline {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.2rem;
+  color: rgba(255,255,255,0.9);
+  font-style: italic;
+  margin-bottom: 6px;
+}
+
+.made {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.45);
+  letter-spacing: 0.04em;
+}
+
+.divider {
+  width: 60px;
+  height: 1px;
+  background: rgba(249, 168, 212, 0.3);
+  margin: 24px auto;
+}
+
+.hint {
+  font-size: 0.85rem;
+  color: rgba(249, 168, 212, 0.6);
+  margin-bottom: 20px;
+}
+
+.eggsZone {
+  position: relative;
+  height: 80px;
+  pointer-events: none;
+}
+.eggsZone > * { pointer-events: auto; }
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  14% { transform: scale(1.15); }
+  28% { transform: scale(1); }
+  42% { transform: scale(1.1); }
+}
